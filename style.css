@@ -20,7 +20,7 @@ body {
     z-index: 1;
 }
 .navbar__s1{
-    color: #A435F0;
+    color: #A435f0;
     font-size: 30px;
     font-weight: bolder;
   
@@ -75,10 +75,19 @@ body {
     padding: 10px;
 }
 .categories p{
-    background-color: #a435f0;
+    background-color: #A435f0;
     color: white;
     border-radius: 30px;
     padding: 10px;
+    cursor: pointer;
+    border: solid #A435f0 1px;
+}
+.categories p:hover{
+    transition: 1s;
+    background-color: transparent;
+    color:black;
+    border: solid #A435f0 1px;
+
 }
 
 .sale-image{
@@ -93,6 +102,21 @@ body {
     position: absolute;
     top: 10%;
     left: 10%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+       
+    }
 }
 .sale-image img{
     width: 100%;
